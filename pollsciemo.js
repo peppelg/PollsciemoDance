@@ -1,5 +1,4 @@
 function merde() {
-  songz = new Audio("songz.mp3")
   songz.controls = false
   songz.loop = true
   songz.autoplay = true
@@ -11,8 +10,14 @@ function merde() {
     }, 50)
   }, 100)
 }
-$(document).on('touchmove', false);
 var wharz = 1
+var songz = new Audio("songz.mp3")
+var mooseca = 0
+button.addEventListener("click", function() {
+  if(mooseca == 1) {
+    songz.play()
+  }
+}
 setTimeout(function() {
   $('#smerde').text('We is chiamando Pollsciemo...')
   wharz = setInterval(function(){
@@ -27,6 +32,7 @@ setTimeout(function() {
 }, 15000)
 setTimeout(function() {
   clearTimeout(wharz)
+  mooseca = 1
   $('img').attr('class','OPSE')
   merde()
 }, 18000)
