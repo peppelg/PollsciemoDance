@@ -17,7 +17,7 @@ button.addEventListener("click", function() {
   if(mooseca == 1) {
     songz.play()
   }
-}
+})
 setTimeout(function() {
   $('#smerde').text('We is chiamando Pollsciemo...')
   wharz = setInterval(function(){
