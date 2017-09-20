@@ -8,9 +8,6 @@ function merde() {
 }
 var wharz = 1
 var songz = new Audio("songz.mp3")
-songz.controls = false
-songz.loop = true
-songz.autoplay = true
 setTimeout(function() {
   $('#smerde').text('We is chiamando Pollsciemo...')
   wharz = setInterval(function(){
@@ -26,6 +23,9 @@ setTimeout(function() {
 setTimeout(function() {
   clearTimeout(wharz)
   $('img').attr('class','OPSE')
+  songz.controls = false
+  songz.loop = true
+  songz.autoplay = true
   songz.play()
   merde()
 }, 18000)
