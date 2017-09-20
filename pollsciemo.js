@@ -1,4 +1,9 @@
 function merde() {
+  songz = new Audio("songz.mp3")
+  songz.controls = false
+  songz.loop = true
+  songz.autoplay = true
+  songz.play()
   setInterval(function () {
     $('html').css("background-color", "blue")
     setTimeout(function () {
@@ -22,10 +27,5 @@ setTimeout(function() {
 setTimeout(function() {
   clearTimeout(wharz)
   $('img').attr('class','OPSE')
-  var songz = new Audio("songz.mp3")
-  songz.controls = false
-  songz.loop = true
-  songz.autoplay = true
-  songz.play()
   merde()
 }, 18000)
