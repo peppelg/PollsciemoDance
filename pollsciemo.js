@@ -13,7 +13,7 @@ function merde() {
 var wharz = 1
 var songz = new Audio("songz.mp3")
 var mooseca = 0
-button.addEventListener("click", function() {
+document.addEventListener("click", function() {
   if(mooseca == 1) {
     songz.play()
   }
