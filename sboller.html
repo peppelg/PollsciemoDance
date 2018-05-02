@@ -1,0 +1,83 @@
+<html>
+<head>
+  <title>Sboller 870</title>
+</head>
+<body>
+  <style>
+  .pulsate {
+    -webkit-animation: pulsate 3s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    opacity: 0.5;
+  }
+  @-webkit-keyframes pulsate {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1.0;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+</style>
+<div id="main">
+  <h3>Press bottone per sbollarsi. Sviluppo!.</h3><br><img src="https://i.imgur.com/cN0bVeZ.png" height=200 width=200 onmouseover="iniziosbollings()"></img>
+</div>
+<script>
+if (typeof window.orientation !== 'undefined') {
+  if (!confirm('Attenzion¡ Questo world wide web site nun è ottimizzato x i mobili phone . Vuoi continuare si no')) {
+    location.href = 'https://pollsciemo.dance'
+    //bye
+  }
+}
+var sbolled = 'nop';
+var main = document.getElementById('main')
+document.getElementsByTagName('html')[0].setAttribute('style', 'cursor: url(https://github.com/peppelg/PollsciemoDance/raw/master/bollcursor.png), auto;')
+function iniziosbollings() {
+  main.innerHTML = '<h3>Press bottone per confermare esecuzione del sbollings. Sviluppo!.</h3><br><img src="https://github.com/peppelg/PollsciemoDance/raw/master/sbollarsi.png" height=200 width=200 onclick="letsSboll()"></img>'
+}
+function letsSboll() {
+  if (sbolled == 'yessa') return 0;
+  sbolled = 'yessa'
+  alert('sviluppo!')
+  setTimeout(function() {
+    main.innerHTML = 'succedera qualcosa .'
+    document.body.style.background = 'blue'
+    setTimeout(function() {
+      main.innerHTML = '<i class="pulsate">Scaricamento ... . . .. . . </i>'
+      document.body.style.background = 'red'
+      setTimeout(function(){
+        window.onmousemove = sbollfinale;
+        main.innerHTML = '<i class="pulsate">In wuesta world wide web pagina ce un boll nascosto. find the boll</i>'
+      }, 2000)
+    }, 3000)
+  }, 2500)
+}
+function sbollfinale(event) {
+  window.onmousemove = ''
+  e = event || window.event
+  main.innerHTML = '<i class="pulsate">Benvenuta nel nostro virtuale realistico interattivo crepe pasta 3d</i><br><img id="c" src="https://github.com/peppelg/PollsciemoDance/raw/master/bollcursor.png" width=65></img> <style> #c {position: absolute; top: 0px; left: 0px;  transition: all 1s;}'
+  document.body.style.cursor = 'none'
+  var object = document.getElementById('c')
+  object.style.display = ''
+  object.style.position = 'absolute'
+  object.style.left = e.clientX; + 'px'
+  object.style.top = e.clientY + 'px'
+  setInterval(function() {
+    x = Math.floor(Math.random()*300)
+    y = Math.floor(Math.random()*300)
+    object.style.top = x + 'px'
+    object.style.left = y + 'px'
+  }, 500)
+  setTimeout(function() {
+    setInterval(function () {
+      document.body.style.background = 'blue'
+      setTimeout(function () {
+        document.body.style.background = 'red'
+      }, 100)
+    }, 200)
+  }, 7000)
+}
+</script></body>
+</html>
